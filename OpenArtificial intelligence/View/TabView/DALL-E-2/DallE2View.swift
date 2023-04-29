@@ -11,9 +11,6 @@ struct DallE2View: View {
     
     @State private var text = ""
     @State private var image = UIImage()
-    @State private var suggestionOfSearch: [String] = [
-        "AI", "Man will be Man", "Elon Mask", "Mailkway With tiger", "Space with Hourse", "DogWithBMW", "GhostGirl"
-    ]
     @StateObject var vm = DallE2OpenAiViewModel()
     
     var body: some View {
@@ -62,7 +59,7 @@ struct DallE2View: View {
                             
                             //NOTE: - Added The Suggestion sentances And Fetch the Array And Assign the text Variables....
                             
-                            text = suggestionOfSearch.randomElement() ?? "AI"
+                            text = suggsesOfSearchImage.randomElement() ?? "AI"
                         } label: {
                             Text("Suggestion")
                                 .foregroundColor(.red)

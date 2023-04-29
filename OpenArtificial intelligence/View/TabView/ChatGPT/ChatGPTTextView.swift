@@ -10,6 +10,9 @@ import SwiftUI
 struct ChatGPTTextView: View {
     
     @StateObject var viewModel = ChaGPTViewModel()
+    @State private var errMessage: String = ""
+    @State private var isError: Bool = false
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         VStack {
@@ -69,7 +72,6 @@ struct ChatGPTTextView: View {
                     //MARK: - Send Button
                     Button {
                         sendMessage()
-                        
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) {
                             withAnimation {
                                 viewModel.message = ""
@@ -86,19 +88,24 @@ struct ChatGPTTextView: View {
             .cornerRadius(25)
             .padding()
         }
+        .alert("Alert", isPresented: $isError) {
+            Button("OK", role: .destructive) {
+                dismiss.callAsFunction()
+            }
+        } message: {
+            Text(errMessage)
+        }
     }
     
     //MARK: - Message View function
     func messageView(_ message: ChatMessageModel) -> some View {
         
         HStack {
-            
             if message.messOwner == .me {
                 withAnimation {
                     Spacer()
                 }
             }
-         
             if !message.text.isEmpty {
                 withAnimation(.spring()) {
                     Text(message.text)
@@ -108,7 +115,6 @@ struct ChatGPTTextView: View {
                         .cornerRadius(15)
                 }
             }
-            
             if message.messOwner == .gpt {
                 withAnimation {
                     Spacer()
@@ -126,6 +132,9 @@ struct ChatGPTTextView: View {
                     try await viewModel.sendMessage()
                 }
                 catch {
+                    
+                    isError = true
+                    errMessage = "Bad Response, please try again!!"
                     debugPrint("ERROR:- \(error.localizedDescription)")
                 }
             }
