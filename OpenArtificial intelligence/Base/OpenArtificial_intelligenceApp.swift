@@ -11,7 +11,7 @@ import SwiftUI
 struct OpenArtificial_intelligenceApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            OpenAIRootView()
         }
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 
 
 enum OpenAILink: String {
-    case APIKey = "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"
+    case APIKey = "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"
     case organization = "Iosdev37"
 }
 

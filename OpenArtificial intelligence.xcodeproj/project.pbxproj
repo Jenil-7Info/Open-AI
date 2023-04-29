@@ -16,7 +16,7 @@
 		70EE4CD92971698400DAFB02 /* OpenArtificial_intelligenceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EE4CD82971698400DAFB02 /* OpenArtificial_intelligenceApp.swift */; };
 		70EE4CDD2971698500DAFB02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70EE4CDC2971698500DAFB02 /* Assets.xcassets */; };
 		70EE4CE02971698500DAFB02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70EE4CDF2971698500DAFB02 /* Preview Assets.xcassets */; };
-		70EE4CEC297169F200DAFB02 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EE4CEB297169F200DAFB02 /* MainView.swift */; };
+		70EE4CEC297169F200DAFB02 /* OpenAIRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EE4CEB297169F200DAFB02 /* OpenAIRootView.swift */; };
 		70EE4CF529716B3F00DAFB02 /* DallE2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EE4CF429716B3F00DAFB02 /* DallE2View.swift */; };
 		70EE4CF729716B9D00DAFB02 /* DallE2OpenAiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EE4CF629716B9D00DAFB02 /* DallE2OpenAiViewModel.swift */; };
 		70EE4CFA29716BCB00DAFB02 /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 70EE4CF929716BCB00DAFB02 /* OpenAIKit */; };
@@ -32,7 +32,7 @@
 		70EE4CD82971698400DAFB02 /* OpenArtificial_intelligenceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenArtificial_intelligenceApp.swift; sourceTree = "<group>"; };
 		70EE4CDC2971698500DAFB02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70EE4CDF2971698500DAFB02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		70EE4CEB297169F200DAFB02 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		70EE4CEB297169F200DAFB02 /* OpenAIRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIRootView.swift; sourceTree = "<group>"; };
 		70EE4CF429716B3F00DAFB02 /* DallE2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DallE2View.swift; sourceTree = "<group>"; };
 		70EE4CF629716B9D00DAFB02 /* DallE2OpenAiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DallE2OpenAiViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,7 +97,7 @@
 		70EE4CE62971699F00DAFB02 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				70EE4CEB297169F200DAFB02 /* MainView.swift */,
+				70EE4CEB297169F200DAFB02 /* OpenAIRootView.swift */,
 				70EE4CED29716A7700DAFB02 /* TabView */,
 			);
 			path = View;
@@ -254,7 +254,7 @@
 				70EE4CF729716B9D00DAFB02 /* DallE2OpenAiViewModel.swift in Sources */,
 				707E125129FBAE9700282A2E /* GVariables.swift in Sources */,
 				707E124829FBA88E00282A2E /* ChaGPTViewModel.swift in Sources */,
-				70EE4CEC297169F200DAFB02 /* MainView.swift in Sources */,
+				70EE4CEC297169F200DAFB02 /* OpenAIRootView.swift in Sources */,
 				704829D329717D2D00402EB8 /* GEnum.swift in Sources */,
 				70EE4CF529716B3F00DAFB02 /* DallE2View.swift in Sources */,
 				707E124F29FBAC6900282A2E /* ChatGPTTextView.swift in Sources */,
