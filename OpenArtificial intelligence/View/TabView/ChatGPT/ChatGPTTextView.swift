@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ChatGPTTextView: View {
     
-    @StateObject var viewModel = ChaGPTViewModel()
-    @State private var errMessage: String = ""
     @State private var isError: Bool = false
+    @StateObject var viewModel = ChatGPTViewModel()
+    @StateObject var firebaseVM = firebaseViewModel()
+    @AppStorage("errMessage") var errMessage: String = ""
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -32,7 +33,7 @@ struct ChatGPTTextView: View {
             
             //ScrollView Effect
             ScrollView {
-                ForEach(viewModel.chatMessage) { message in
+                ForEach(firebaseVM.chatModel) { message in
                     messageView(message)
                 }
                 .rotationEffect(.degrees(180))
@@ -47,6 +48,7 @@ struct ChatGPTTextView: View {
                     .autocorrectionDisabled(true)
                     .onSubmit {
                         withAnimation(.spring()) {
+                            firebaseVM.addData(message: viewModel.message, messOwner: .me)
                             sendMessage()
                             DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) {
                                 withAnimation {
@@ -71,6 +73,8 @@ struct ChatGPTTextView: View {
                     
                     //MARK: - Send Button
                     Button {
+                        
+                        firebaseVM.addData(message: viewModel.message, messOwner: .me)
                         sendMessage()
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) {
                             withAnimation {
@@ -87,6 +91,9 @@ struct ChatGPTTextView: View {
             .background(.black.opacity(0.05))
             .cornerRadius(25)
             .padding()
+        }
+        .onAppear {
+            firebaseVM.fetchData()
         }
         .alert("Alert", isPresented: $isError) {
             Button("OK", role: .destructive) {

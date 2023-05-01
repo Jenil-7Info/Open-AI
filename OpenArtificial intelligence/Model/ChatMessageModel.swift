@@ -6,16 +6,18 @@
 //
 
 import SwiftUI
+import FirebaseFirestoreSwift
 
-struct ChatMessageModel: Identifiable {
-    
-    var id: UUID
+//MARK: - Chat-Message Model
+struct ChatMessageModel: Identifiable ,Codable {
+    var id : UUID = UUID()
     var messOwner : MessageOwner
     var text : String
+    var timeStamp: Date
     
-    init(id: UUID = UUID(), messOwner: MessageOwner, text: String) {
-        self.id = id
+    init(messOwner: MessageOwner, text: String, timeStamp: Date) {
         self.messOwner = messOwner
         self.text = text
+        self.timeStamp = timeStamp
     }
 }

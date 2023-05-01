@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7023B65E29FF9E4B003E6910 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7023B65D29FF9E4B003E6910 /* GoogleService-Info.plist */; };
+		7023B66129FF9EEA003E6910 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7023B66029FF9EEA003E6910 /* FirebaseAuth */; };
+		7023B66329FF9EEA003E6910 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7023B66229FF9EEA003E6910 /* FirebaseFirestore */; };
+		7023B66529FF9EEA003E6910 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7023B66429FF9EEA003E6910 /* FirebaseFirestoreSwift */; };
+		7023B66729FF9F58003E6910 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023B66629FF9F58003E6910 /* AppDelegate.swift */; };
+		7023B66B29FFD248003E6910 /* firebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023B66A29FFD248003E6910 /* firebaseViewModel.swift */; };
 		704829D329717D2D00402EB8 /* GEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704829D229717D2D00402EB8 /* GEnum.swift */; };
-		707E124829FBA88E00282A2E /* ChaGPTViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E124729FBA88E00282A2E /* ChaGPTViewModel.swift */; };
+		707E124829FBA88E00282A2E /* ChatGPTViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E124729FBA88E00282A2E /* ChatGPTViewModel.swift */; };
 		707E124B29FBA8D900282A2E /* ChatGPTSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 707E124A29FBA8D900282A2E /* ChatGPTSwift */; };
 		707E124D29FBAAD700282A2E /* ChatMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E124C29FBAAD700282A2E /* ChatMessageModel.swift */; };
 		707E124F29FBAC6900282A2E /* ChatGPTTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E124E29FBAC6900282A2E /* ChatGPTTextView.swift */; };
@@ -23,8 +29,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7023B65D29FF9E4B003E6910 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7023B66629FF9F58003E6910 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7023B66A29FFD248003E6910 /* firebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseViewModel.swift; sourceTree = "<group>"; };
 		704829D229717D2D00402EB8 /* GEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEnum.swift; sourceTree = "<group>"; };
-		707E124729FBA88E00282A2E /* ChaGPTViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaGPTViewModel.swift; sourceTree = "<group>"; };
+		707E124729FBA88E00282A2E /* ChatGPTViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTViewModel.swift; sourceTree = "<group>"; };
 		707E124C29FBAAD700282A2E /* ChatMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageModel.swift; sourceTree = "<group>"; };
 		707E124E29FBAC6900282A2E /* ChatGPTTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTTextView.swift; sourceTree = "<group>"; };
 		707E125029FBAE9700282A2E /* GVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GVariables.swift; sourceTree = "<group>"; };
@@ -42,7 +51,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7023B66529FF9EEA003E6910 /* FirebaseFirestoreSwift in Frameworks */,
 				707E124B29FBA8D900282A2E /* ChatGPTSwift in Frameworks */,
+				7023B66329FF9EEA003E6910 /* FirebaseFirestore in Frameworks */,
+				7023B66129FF9EEA003E6910 /* FirebaseAuth in Frameworks */,
 				70EE4CFA29716BCB00DAFB02 /* OpenAIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,10 +62,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7023B65C29FF9840003E6910 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
 		707E124629FBA83A00282A2E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				707E124729FBA88E00282A2E /* ChaGPTViewModel.swift */,
+				707E124729FBA88E00282A2E /* ChatGPTViewModel.swift */,
+				7023B66A29FFD248003E6910 /* firebaseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -99,6 +119,7 @@
 			children = (
 				70EE4CEB297169F200DAFB02 /* OpenAIRootView.swift */,
 				70EE4CED29716A7700DAFB02 /* TabView */,
+				7023B65C29FF9840003E6910 /* Firebase */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -133,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				70EE4CD82971698400DAFB02 /* OpenArtificial_intelligenceApp.swift */,
+				7023B66629FF9F58003E6910 /* AppDelegate.swift */,
+				7023B65D29FF9E4B003E6910 /* GoogleService-Info.plist */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -191,6 +214,9 @@
 			packageProductDependencies = (
 				70EE4CF929716BCB00DAFB02 /* OpenAIKit */,
 				707E124A29FBA8D900282A2E /* ChatGPTSwift */,
+				7023B66029FF9EEA003E6910 /* FirebaseAuth */,
+				7023B66229FF9EEA003E6910 /* FirebaseFirestore */,
+				7023B66429FF9EEA003E6910 /* FirebaseFirestoreSwift */,
 			);
 			productName = "OpenArtificial intelligence";
 			productReference = 70EE4CD52971698400DAFB02 /* OpenArtificial intelligence.app */;
@@ -223,6 +249,7 @@
 			packageReferences = (
 				70EE4CF829716BCB00DAFB02 /* XCRemoteSwiftPackageReference "OpenAIKit" */,
 				707E124929FBA8D900282A2E /* XCRemoteSwiftPackageReference "ChatGPTSwift" */,
+				7023B65F29FF9EEA003E6910 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 70EE4CD62971698400DAFB02 /* Products */;
 			projectDirPath = "";
@@ -240,6 +267,7 @@
 			files = (
 				70EE4CE02971698500DAFB02 /* Preview Assets.xcassets in Resources */,
 				70EE4CDD2971698500DAFB02 /* Assets.xcassets in Resources */,
+				7023B65E29FF9E4B003E6910 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,11 +281,13 @@
 				70EE4CD92971698400DAFB02 /* OpenArtificial_intelligenceApp.swift in Sources */,
 				70EE4CF729716B9D00DAFB02 /* DallE2OpenAiViewModel.swift in Sources */,
 				707E125129FBAE9700282A2E /* GVariables.swift in Sources */,
-				707E124829FBA88E00282A2E /* ChaGPTViewModel.swift in Sources */,
+				707E124829FBA88E00282A2E /* ChatGPTViewModel.swift in Sources */,
 				70EE4CEC297169F200DAFB02 /* OpenAIRootView.swift in Sources */,
 				704829D329717D2D00402EB8 /* GEnum.swift in Sources */,
 				70EE4CF529716B3F00DAFB02 /* DallE2View.swift in Sources */,
 				707E124F29FBAC6900282A2E /* ChatGPTTextView.swift in Sources */,
+				7023B66729FF9F58003E6910 /* AppDelegate.swift in Sources */,
+				7023B66B29FFD248003E6910 /* firebaseViewModel.swift in Sources */,
 				707E124D29FBAAD700282A2E /* ChatMessageModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +491,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7023B65F29FF9EEA003E6910 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		707E124929FBA8D900282A2E /* XCRemoteSwiftPackageReference "ChatGPTSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/alfianlosari/ChatGPTSwift.git";
@@ -480,6 +518,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7023B66029FF9EEA003E6910 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7023B65F29FF9EEA003E6910 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		7023B66229FF9EEA003E6910 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7023B65F29FF9EEA003E6910 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		7023B66429FF9EEA003E6910 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7023B65F29FF9EEA003E6910 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
 		707E124A29FBA8D900282A2E /* ChatGPTSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 707E124929FBA8D900282A2E /* XCRemoteSwiftPackageReference "ChatGPTSwift" */;
